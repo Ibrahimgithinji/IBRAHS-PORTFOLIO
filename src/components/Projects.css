@@ -1,0 +1,496 @@
+/* Projects Section Styles */
+.projects {
+  background: var(--bg-color);
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.subsection-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+}
+
+/* Featured Projects Section */
+.featured-projects-section {
+  margin-bottom: 5rem;
+}
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featured-project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.featured-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.featured-project-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.featured-project-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* GitHub Projects Section */
+.github-projects-section {
+  margin-top: 4rem;
+}
+
+/* Repository Grid Layout */
+.repositories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Repository Card Styles */
+.repository-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.repository-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--secondary-color);
+}
+
+.repository-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.repository-name {
+  margin: 0;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.repo-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.repo-link:hover {
+  color: var(--secondary-color);
+}
+
+.language-badge {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.repository-description {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Repository Topics */
+.repository-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.topic-tag {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Repository Footer */
+.repository-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.stat {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.repo-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.demo-link,
+.github-link {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.demo-link {
+  background: var(--success-color);
+  color: white;
+}
+
+.demo-link:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.github-link {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.github-link:hover {
+  background: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.repository-updated {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Loading Skeleton Styles */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.skeleton-header {
+  height: 1.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-description {
+  height: 3rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-tag {
+  height: 1.5rem;
+  width: 60px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+}
+
+.skeleton-footer {
+  height: 2rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+/* Error State Styles */
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.retry-button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.retry-button:hover:not(:disabled) {
+  background: var(--secondary-hover);
+  transform: translateY(-2px);
+}
+
+.retry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* No Repositories State */
+.no-repositories {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .repositories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featured-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .repositories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .repository-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .repository-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .repo-stats {
+    justify-content: center;
+  }
+  
+  .repo-links {
+    justify-content: center;
+  }
+  
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+  
+  .featured-project-card,
+  .repository-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .repositories-grid {
+    gap: 1.5rem;
+  }
+  
+  .featured-projects-grid {
+    gap: 1.5rem;
+  }
+  
+  .repository-card,
+  .featured-project-card {
+    padding: 1rem;
+  }
+  
+  .subsection-title {
+    font-size: 1.3rem;
+  }
+  
+  .project-tags,
+  .repository-topics {
+    justify-content: center;
+  }
+  
+  .error-container {
+    padding: 2rem;
+  }
+}
+
+/* Animation for fade-in elements */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Focus states for accessibility */
+.demo-link:focus,
+.github-link:focus,
+.repo-link:focus,
+.retry-button:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .repository-card {
+    border-width: 2px;
+  }
+  
+  .featured-project-card {
+    border-width: 2px;
+  }
+  
+  .topic-tag,
+  .tag {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .repository-card,
+  .featured-project-card,
+  .repo-link,
+  .demo-link,
+  .github-link,
+  .retry-button {
+    transition: none;
+  }
+  
+  .skeleton::before {
+    animation: none;
+  }
+  
+  .fade-in,
+  .slide-up {
+    transition: none;
+  }
+}
